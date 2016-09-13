@@ -24,15 +24,13 @@ var EventForm = (function () {
             Location: new forms_1.FormControl('')
         });
         this.saveEvent = function (obj) {
-            _this.data.saveEvent(obj).subscribe(function (x) { return console.log(x); });
-            ;
+            _this.data.saveEvent(obj).subscribe(function (x) { console.log(x); });
         };
         this.data = data;
     }
     EventForm.prototype.ngOnInit = function () {
         var _this = this;
-        this.evFrm.valueChanges.subscribe(function (x) { return _this.output = x; });
-        ;
+        this.evFrm.valueChanges.subscribe(function (x) { _this.output = x; });
         console.log("evFrm: ", this.evFrm);
     };
     EventForm = __decorate([

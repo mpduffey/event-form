@@ -28,10 +28,10 @@ export class EventForm implements OnInit {
 		this.data = data;
 	}
 	ngOnInit() {
-		this.evFrm.valueChanges.subscribe(x => this.output = x;);
+		this.evFrm.valueChanges.subscribe(x => {this.output = x;});
 		console.log("evFrm: ", this.evFrm);
 	}
 	saveEvent = (obj) => {
-		this.data.saveEvent(obj).subscribe(x => console.log(x););
+		this.data.saveEvent(obj).subscribe(x => {console.log(x);});
 	}
 }
